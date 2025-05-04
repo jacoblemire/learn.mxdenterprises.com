@@ -9,7 +9,7 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #4e7dff, #18c8c8); /* Engaging background gradient */
+      background: linear-gradient(135deg, #4e7dff, #18c8c8);
       color: white;
       height: 100%;
       display: flex;
@@ -19,7 +19,7 @@
       padding-top: 50px;
       background-size: cover;
       background-attachment: fixed;
-      transition: all 0.3s ease-in-out; /* Smooth transition */
+      transition: all 0.3s ease-in-out;
     }
 
     /* Course Content Container */
@@ -48,7 +48,6 @@
       margin-top: 40px;
       color: #00b894;
       text-align: center;
-      transition: font-size 0.3s ease;
     }
 
     /* Module Content */
@@ -71,20 +70,18 @@
       margin-bottom: 15px;
       font-weight: bold;
       text-transform: uppercase;
-      transition: font-size 0.3s ease;
     }
 
     .module p {
       font-size: 16px;
       margin-bottom: 20px;
-      transition: font-size 0.3s ease;
     }
 
     /* Video Preview Box */
     .module video {
       width: 100%;
-      max-width: 900px;
-      border-radius: 10px;
+      max-width: 320px; /* Smaller video size */
+      border-radius: 50%;
       margin-bottom: 20px;
       transition: all 0.3s ease;
     }
@@ -94,14 +91,13 @@
       background-color: #00b894;
       color: white;
       font-weight: bold;
-      padding: 15px 25px;
+      padding: 10px 20px;
       text-align: center;
       border-radius: 50px;
       margin-top: 20px;
       text-decoration: none;
       transition: all 0.3s ease;
       display: inline-block;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       width: 100%;
       max-width: 350px;
       border: 2px solid #00b894;
@@ -109,14 +105,8 @@
 
     .cta-button:hover {
       background-color: #00a079;
-      transform: scale(1.05); /* Hover effect on button */
+      transform: scale(1.05);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Hover effect for video modules */
-    .module:hover {
-      transform: translateY(-10px); /* Slight lift effect */
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     }
 
     /* Footer Section */
@@ -158,6 +148,7 @@
       .module video {
         width: 100%;
         max-width: 100%;
+        border-radius: 15px; /* Rounded edges on video for a bubble look */
       }
     }
 
