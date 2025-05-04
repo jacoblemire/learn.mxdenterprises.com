@@ -1,95 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Training – MXD Enterprises</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Training - MXD Enterprises</title>
   <style>
+    /* Body and background */
     body {
+      font-family: 'Arial', sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4fdf6;
-      color: #222;
-    }
-    header {
-      background-color: #00c776;
+      padding: 0;
+      background: linear-gradient(135deg, #4e7dff, #18c8c8); /* Engaging background gradient */
       color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      color: #00c776;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    form {
+      height: 100vh;
       display: flex;
-      flex-direction: column;
-      gap: 15px;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-attachment: fixed;
     }
-    input {
-      padding: 12px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button {
-      padding: 14px;
-      font-size: 16px;
-      background-color: #00c776;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .footer {
+
+    /* Form container */
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
       text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
     }
-    .footer a {
-      color: #00c776;
-      text-decoration: none;
+
+    .form-container h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
     }
+
+    .form-container h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .form-container input,
+    .form-container button {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    /* Input styles */
+    .form-container input[type="text"],
+    .form-container input[type="email"] {
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Button styles */
+    .form-container button {
+      background-color: #00b894;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #00a079;
+    }
+
+    /* Disclaimer and Links */
     .disclaimer {
       font-size: 12px;
+      color: #bbb;
+      margin-top: 10px;
+    }
+
+    .disclaimer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer {
+      font-size: 14px;
       margin-top: 30px;
-      color: #999;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      color: #00b894;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>MXD Enterprises</h1>
-  </header>
+  <div class="form-container">
+    <h1>How to Make $5K–$10K/Month Remotely Through High-Ticket Sales</h1>
+    <h2>Get instant access to our proven system for earning remotely — no fluff, just results!</h2>
 
-  <div class="container">
-    <h2>How to Make $1–5K/Month Remotely Through High-Ticket Sales</h2>
-    <form action="https://formspree.io/f/xwpoljrg" method="POST">
+    <!-- Form for collecting data -->
+    <form action="https://formspree.io/f/xwpoljrg" method="POST" onsubmit="window.location.href='free-course.html'; return false;">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone (Optional)" />
       <button type="submit">Get Instant Access</button>
     </form>
 
-    <div class="disclaimer">
+    <!-- Disclaimer and footer -->
+    <p class="disclaimer">
       Disclaimer: This training is for educational purposes only. We do not guarantee any income, sales, or business results. Your success depends on your effort, consistency, and market conditions.
-    </div>
+    </p>
 
     <div class="footer">
-      <p>Questions? Email us at <a href="mailto:contact@mxdenterprises.com">contact@mxdenterprises.com</a></p>
-      <p><a href="https://calendly.com/jadasalescall" target="_blank">Book a Call with Jada</a></p>
+      <p>Questions? <a href="mailto:contact@mxdenterprises.com">Email Us</a> | <a href="https://calendly.com/jada-mxd" target="_blank">Book a Call with Jada</a></p>
     </div>
   </div>
 
