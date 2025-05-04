@@ -62,7 +62,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Button Styling */
+        /* Button Styling (Only for last module) */
         .cta-button {
             display: block;
             width: 60%;
@@ -77,31 +77,11 @@
             text-decoration: none;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default */
         }
 
         .cta-button:hover {
             background-color: #1E4C38; /* Darker green on hover */
-        }
-
-        /* Secondary Button */
-        .secondary-button {
-            display: block;
-            width: 60%;
-            padding: 14px;
-            background-color: #1E3A8A; /* MXD Bold Blue */
-            color: white;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 6px;
-            margin: 20px auto;
-            text-decoration: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .secondary-button:hover {
-            background-color: #1D4ED8; /* Lighter blue on hover */
         }
 
         /* Mobile Responsiveness */
@@ -114,63 +94,67 @@
                 font-size: 14px;
             }
 
-            .cta-button {
-                width: 80%;
-                font-size: 16px;
-            }
-
             video {
                 width: 90%;
-                border-radius: 10px;
+                height: auto;
             }
 
-            .secondary-button {
+            .cta-button {
                 width: 80%;
-                font-size: 16px;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- Main content container -->
     <div class="module-container">
+
         <!-- Module 1 -->
         <div class="module">
-            <h2>Module 1: Introduction to High-Ticket Sales</h2>
-            <p>We'll start by explaining the basics of high-ticket sales, how they work, and how you can leverage them for consistent income.</p>
+            <h2>MODULE 1: INTRODUCTION TO HIGH-TICKET SALES</h2>
+            <p>We’ll start by explaining the basics of high-ticket sales, how they work, and how you can leverage them for consistent income.</p>
             <div class="video-container">
                 <video controls>
-                    <source src="your-video-source.mp4" type="video/mp4">
+                    <source src="module1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button">Join the MXD Sales Academy</a>
         </div>
 
         <!-- Module 2 -->
         <div class="module">
-            <h2>Module 2: Understanding Your Target Market</h2>
+            <h2>MODULE 2: UNDERSTANDING YOUR TARGET MARKET</h2>
             <p>This module dives into identifying your ideal clients, their pain points, and how to approach them effectively.</p>
             <div class="video-container">
                 <video controls>
-                    <source src="your-video-source.mp4" type="video/mp4">
+                    <source src="module2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button">Join the MXD Sales Academy</a>
         </div>
 
         <!-- Module 3 -->
         <div class="module">
-            <h2>Module 3: How to Start Closing Deals and Making $5K–$10K/Month</h2>
+            <h2>MODULE 3: HOW TO START CLOSING DEALS AND MAKING $5K–$10K/MONTH</h2>
             <p>We’ll show you how to start making real sales and earning consistently using our proven strategies.</p>
             <div class="video-container">
                 <video controls>
-                    <source src="your-video-source.mp4" type="video/mp4">
+                    <source src="module3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button">Join the MXD Sales Academy</a>
         </div>
+
+        <!-- Button shown only for the last module -->
+        <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" id="ctaButton">Join the MXD Sales Academy</a>
+
     </div>
+
+    <script>
+        // Make the CTA button visible only after the last video
+        document.getElementById('ctaButton').style.display = 'block';
+    </script>
+
 </body>
 </html>
