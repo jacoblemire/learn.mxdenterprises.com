@@ -22,7 +22,7 @@
 
     /* Form container */
     .form-container {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 40px;
       border-radius: 10px;
       width: 100%;
@@ -39,6 +39,7 @@
     .form-container h1 {
       font-size: 36px;
       margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     .form-container h2 {
@@ -79,6 +80,7 @@
       color: white;
       font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
     }
 
     .form-container button:hover {
@@ -124,7 +126,7 @@
     <form action="https://formspree.io/f/xwpoljrg" method="POST" onsubmit="window.location.href='free-course.html'; return false;">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone Number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+      <input type="tel" name="phone" placeholder="Your Phone Number (123-456-7890)" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
       <button type="submit">Get Instant Access</button>
     </form>
 
