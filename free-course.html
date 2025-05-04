@@ -10,7 +10,23 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F5F5F5; /* Light gray background for a clean look */
+            background: linear-gradient(45deg, #2D6A4F, #4C9A2B); /* MXD Green Gradient */
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
+            color: #FFFFFF; /* White text for better readability */
+        }
+
+        /* Animation for the background gradient */
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         /* Container for the course modules */
@@ -20,25 +36,34 @@
             padding: 20px;
         }
 
+        /* Section Divider */
+        .section-divider {
+            height: 2px;
+            background-color: #2D6A4F; /* MXD Dark Green */
+            margin: 30px 0;
+        }
+
         /* Module styles */
         .module {
-            background-color: #FFFFFF; /* White background for modules */
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for modules */
             padding: 30px;
             margin-bottom: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: 2px solid #D1D5DB; /* Light gray border */
+            position: relative;
+            z-index: 1;
         }
 
         /* Module Titles */
         .module h2 {
             font-size: 28px;
             font-weight: bold;
-            color: #0A0A0A; /* Dark black for the title */
-            margin-bottom: 15px;
+            color: #2D6A4F; /* MXD Dark Green for titles */
+            margin-bottom: 10px;
         }
 
-        /* Description Text */
+        /* Subheading Text */
         .module p {
             font-size: 16px;
             color: #4B4B4B; /* Dark gray for text */
@@ -58,8 +83,14 @@
             width: 80%;
             max-width: 80%;
             height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px; /* Rounded corners for videos */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to make the video clickable */
+            cursor: pointer; /* Visual feedback that video is clickable */
+            transition: transform 0.3s ease;
+        }
+
+        video:hover {
+            transform: scale(1.05); /* Slight zoom-in effect on hover */
         }
 
         /* Button Styling (Only for last module) */
@@ -77,9 +108,10 @@
             text-decoration: none;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            display: none; /* Hidden by default */
+            transition: background-color 0.3s ease;
         }
 
+        /* Hover effect for the CTA button */
         .cta-button:hover {
             background-color: #1E4C38; /* Darker green on hover */
         }
@@ -122,6 +154,8 @@
             </div>
         </div>
 
+        <div class="section-divider"></div>
+
         <!-- Module 2 -->
         <div class="module">
             <h2>MODULE 2: UNDERSTANDING YOUR TARGET MARKET</h2>
@@ -133,6 +167,8 @@
                 </video>
             </div>
         </div>
+
+        <div class="section-divider"></div>
 
         <!-- Module 3 -->
         <div class="module">
@@ -150,11 +186,6 @@
         <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" id="ctaButton">Join the MXD Sales Academy</a>
 
     </div>
-
-    <script>
-        // Make the CTA button visible only after the last video
-        document.getElementById('ctaButton').style.display = 'block';
-    </script>
 
 </body>
 </html>
