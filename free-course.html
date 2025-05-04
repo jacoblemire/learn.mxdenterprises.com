@@ -1,192 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Course - MXD Enterprises</title>
-    <style>
-        /* General body styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(45deg, #2D6A4F, #4C9A2B); /* MXD Green Gradient */
-            background-size: 400% 400%;
-            animation: gradientBackground 10s ease infinite;
-            color: #FFFFFF; /* White text for better readability */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Course - MXD Enterprises</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #2D6A4F, #4C9A2B);
+      background-size: 400% 400%;
+      animation: gradientBackground 10s ease infinite;
+      color: #FFFFFF;
+    }
 
-        /* Animation for the background gradient */
-        @keyframes gradientBackground {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-        /* Container for the course modules */
-        .module-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    .module-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-        /* Section Divider */
-        .section-divider {
-            height: 2px;
-            background-color: #2D6A4F; /* MXD Dark Green */
-            margin: 30px 0;
-        }
+    .section-divider {
+      height: 2px;
+      background-color: #2D6A4F;
+      margin: 30px 0;
+    }
 
-        /* Module styles */
-        .module {
-            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for modules */
-            padding: 30px;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 2px solid #D1D5DB; /* Light gray border */
-            position: relative;
-            z-index: 1;
-        }
+    .module {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 2px solid #D1D5DB;
+      color: #1e1e1e;
+    }
 
-        /* Module Titles */
-        .module h2 {
-            font-size: 28px;
-            font-weight: bold;
-            color: #2D6A4F; /* MXD Dark Green for titles */
-            margin-bottom: 10px;
-        }
+    .module h2 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2D6A4F;
+      margin-bottom: 10px;
+    }
 
-        /* Subheading Text */
-        .module p {
-            font-size: 16px;
-            color: #4B4B4B; /* Dark gray for text */
-            margin-bottom: 20px;
-        }
+    .module p {
+      font-size: 16px;
+      color: #4B4B4B;
+      margin-bottom: 20px;
+    }
 
-        /* Video container */
-        .video-container {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 25px;
-            text-align: center;
-        }
+    .video-container {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-        video {
-            width: 80%;
-            max-width: 80%;
-            height: auto;
-            border-radius: 12px; /* Rounded corners for videos */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to make the video clickable */
-            cursor: pointer; /* Visual feedback that video is clickable */
-            transition: transform 0.3s ease;
-        }
+    iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
-        video:hover {
-            transform: scale(1.05); /* Slight zoom-in effect on hover */
-        }
+    .cta-button {
+      display: block;
+      width: 60%;
+      padding: 14px;
+      background-color: #2D6A4F;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 6px;
+      margin: 20px auto;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
 
-        /* Button Styling (Only for last module) */
-        .cta-button {
-            display: block;
-            width: 60%;
-            padding: 14px;
-            background-color: #2D6A4F; /* MXD Dark Green */
-            color: white;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 6px;
-            margin: 20px auto;
-            text-decoration: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-        }
+    .cta-button:hover {
+      background-color: #1E4C38;
+    }
 
-        /* Hover effect for the CTA button */
-        .cta-button:hover {
-            background-color: #1E4C38; /* Darker green on hover */
-        }
+    @media screen and (max-width: 768px) {
+      .module h2 {
+        font-size: 22px;
+      }
 
-        /* Mobile Responsiveness */
-        @media screen and (max-width: 768px) {
-            .module h2 {
-                font-size: 22px;
-            }
+      .module p {
+        font-size: 14px;
+      }
 
-            .module p {
-                font-size: 14px;
-            }
+      iframe {
+        height: 220px;
+      }
 
-            video {
-                width: 90%;
-                height: auto;
-            }
-
-            .cta-button {
-                width: 80%;
-            }
-        }
-    </style>
+      .cta-button {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Main content container -->
-    <div class="module-container">
+  <div class="module-container">
 
-        <!-- Module 1 -->
-        <div class="module">
-            <h2>MODULE 1: INTRODUCTION TO HIGH-TICKET SALES</h2>
-            <p>We’ll start by explaining the basics of high-ticket sales, how they work, and how you can leverage them for consistent income.</p>
-            <div class="video-container">
-                <video controls>
-                    <source src="module1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-        <div class="section-divider"></div>
-
-        <!-- Module 2 -->
-        <div class="module">
-            <h2>MODULE 2: UNDERSTANDING YOUR TARGET MARKET</h2>
-            <p>This module dives into identifying your ideal clients, their pain points, and how to approach them effectively.</p>
-            <div class="video-container">
-                <video controls>
-                    <source src="module2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-        <div class="section-divider"></div>
-
-        <!-- Module 3 -->
-        <div class="module">
-            <h2>MODULE 3: HOW TO START CLOSING DEALS AND MAKING $5K–$10K/MONTH</h2>
-            <p>We’ll show you how to start making real sales and earning consistently using our proven strategies.</p>
-            <div class="video-container">
-                <video controls>
-                    <source src="module3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-        <!-- Button shown only for the last module -->
-        <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" id="ctaButton">Join the MXD Sales Academy</a>
-
+    <div class="module">
+      <h2>MODULE 1: INTRODUCTION TO HIGH-TICKET SALES</h2>
+      <p>We’ll start by explaining the basics of high-ticket sales, how they work, and how you can leverage them for consistent income.</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
     </div>
+
+    <div class="section-divider"></div>
+
+    <div class="module">
+      <h2>MODULE 2: UNDERSTANDING YOUR TARGET MARKET</h2>
+      <p>This module dives into identifying your ideal clients, their pain points, and how to approach them effectively.</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="module">
+      <h2>MODULE 3: CLOSING DEALS & EARNING $5K–$10K/MONTH</h2>
+      <p>We’ll show you how to start making real sales and earning consistently using our proven strategies.</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button">Join the MXD Sales Academy</a>
+
+  </div>
 
 </body>
 </html>
