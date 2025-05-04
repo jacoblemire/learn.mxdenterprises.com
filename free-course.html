@@ -1,211 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Course - MXD Enterprises</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #4e7dff, #18c8c8);
-      color: white;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 50px;
-      background-size: cover;
-      background-attachment: fixed;
-      transition: all 0.3s ease-in-out;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Course - MXD Enterprises</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
 
-    .course-container {
-      width: 100%;
-      max-width: 1000px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
+        /* Container for the course modules */
+        .module-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    h1 {
-      font-size: 30px;
-      text-align: center;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-      margin-bottom: 40px;
-      padding: 0 20px;
-      transition: font-size 0.3s ease;
-    }
+        /* Module styles */
+        .module {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
+        /* Video container */
+        .video-container {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
 
-    .module {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      text-align: center;
-      position: relative;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      width: 100%;
-      max-width: 900px;
-      margin: 20px 0;
-    }
+        video {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
 
-    .module p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
+        /* Module Title and Description */
+        .module h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-    /* Video Preview */
-    .module video {
-      width: 100%;
-      max-width: 320px; /* Smaller video size */
-      border-radius: 15px; /* Soft rounded edges */
-      margin-bottom: 20px;
-      transition: all 0.3s ease;
-    }
+        .module p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
 
-    /* Centered Call to Action Button */
-    .cta-button {
-      background-color: #00b894;
-      color: white;
-      font-weight: bold;
-      padding: 12px 24px;
-      text-align: center;
-      border-radius: 50px;
-      margin-top: 20px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: inline-block;
-      width: 100%;
-      max-width: 350px;
-      border: 2px solid #00b894;
-    }
+        /* Button Styling */
+        .cta-button {
+            display: block;
+            width: 60%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 20px auto;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
-    .cta-button:hover {
-      background-color: #00a079;
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    }
+        .cta-button:hover {
+            background-color: #218838;
+        }
 
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      text-align: center;
-      color: #bbb;
-    }
+        /* Responsive Mobile Design */
+        @media screen and (max-width: 768px) {
+            .module h2 {
+                font-size: 22px;
+            }
 
-    .footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
+            .module p {
+                font-size: 14px;
+            }
 
-    .footer a:hover {
-      color: #00b894;
-    }
+            .cta-button {
+                width: 80%;
+                font-size: 16px;
+            }
 
-    /* Responsive Design */
-    @media screen and (max-width: 768px) {
-      h1 {
-        font-size: 28px;
-      }
-
-      .module {
-        padding: 20px;
-      }
-
-      .cta-button {
-        max-width: 100%;
-      }
-
-      /* Video adjustments for mobile */
-      .module video {
-        width: 100%;
-        max-width: 100%;
-        border-radius: 15px; /* Soft rounded edges */
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      h1 {
-        font-size: 24px;
-      }
-
-      .module h3 {
-        font-size: 20px;
-      }
-
-      .cta-button {
-        font-size: 14px;
-        padding: 12px 20px;
-      }
-
-      .footer {
-        font-size: 12px;
-      }
-    }
-  </style>
+            /* Video adjustments */
+            video {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="module-container">
+        <!-- Module 1 -->
+        <div class="module">
+            <h2>Module 1: Introduction to High-Ticket Sales</h2>
+            <p>We'll start by explaining the basics of high-ticket sales, how they work, and how you can leverage them for consistent income.</p>
+            <div class="video-container">
+                <video controls>
+                    <source src="your-video-source.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button">Join the MXD Sales Academy</a>
+        </div>
 
-  <div class="course-container">
-    <h1>Free Course: How to Make $5K–$10K/Month Remotely Through High-Ticket Sales</h1>
+        <!-- Module 2 -->
+        <div class="module">
+            <h2>Module 2: Understanding Your Target Market</h2>
+            <p>This module dives into identifying your ideal clients, their pain points, and how to approach them effectively.</p>
+            <div class="video-container">
+                <video controls>
+                    <source src="your-video-source.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button">Join the MXD Sales Academy</a>
+        </div>
 
-    <!-- Module 1 -->
-    <div class="module">
-      <h3>Module 1: Introduction to High-Ticket Sales</h3>
-      <p>We’ll start by explaining the basics of high-ticket sales, how they work, and how you can leverage them for consistent income.</p>
-      <video controls>
-        <source src="path-to-your-video1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <!-- CTA Button under the video -->
-      <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" target="_blank">Join the MXD Sales Academy</a>
+        <!-- Module 3 -->
+        <div class="module">
+            <h2>Module 3: How to Start Closing Deals and Making $5K–$10K/Month</h2>
+            <p>We’ll show you how to start making real sales and earning consistently using our proven strategies.</p>
+            <div class="video-container">
+                <video controls>
+                    <source src="your-video-source.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button">Join the MXD Sales Academy</a>
+        </div>
     </div>
-
-    <!-- Module 2 -->
-    <div class="module">
-      <h3>Module 2: Understanding Your Target Market</h3>
-      <p>This module dives into identifying your ideal clients, their pain points, and how to approach them effectively.</p>
-      <video controls>
-        <source src="path-to-your-video2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <!-- CTA Button under the video -->
-      <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" target="_blank">Join the MXD Sales Academy</a>
-    </div>
-
-    <!-- Module 3 -->
-    <div class="module">
-      <h3>Module 3: How to Start Closing Deals and Making $5K–$10K/Month</h3>
-      <p>We’ll show you how to start making real sales and earning consistently using our proven strategies.</p>
-      <video controls>
-        <source src="path-to-your-video3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <!-- Only CTA Button under Module 3 -->
-      <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" target="_blank">Join the MXD Sales Academy</a>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="footer">
-      <p>Want more success stories like these? <a href="https://calendly.com/jadafig1" target="_blank">Book a Call with Jada</a> to learn more!</p>
-      <p>"I went from struggling to landing $10K/month clients in just 3 months!" — Mark, Academy Graduate</p>
-      <p>"The step-by-step guidance completely changed my life." — Sarah, New Earner</p>
-    </div>
-  </div>
-
 </body>
 </html>
