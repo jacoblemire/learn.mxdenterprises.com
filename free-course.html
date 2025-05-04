@@ -7,10 +7,10 @@
     <style>
         /* General body styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
+            background-color: #F5F5F5; /* Light gray background for a clean look */
         }
 
         /* Container for the course modules */
@@ -22,11 +22,27 @@
 
         /* Module styles */
         .module {
-            background-color: #ffffff;
-            padding: 20px;
+            background-color: #FFFFFF; /* White background for modules */
+            padding: 30px;
             margin-bottom: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #D1D5DB; /* Light gray border */
+        }
+
+        /* Module Titles */
+        .module h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0A0A0A; /* Dark black for the title */
+            margin-bottom: 15px;
+        }
+
+        /* Description Text */
+        .module p {
+            font-size: 16px;
+            color: #4B4B4B; /* Dark gray for text */
+            margin-bottom: 20px;
         }
 
         /* Video container */
@@ -34,49 +50,61 @@
             width: 100%;
             max-width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            text-align: center;
         }
 
         video {
-            width: 100%;
-            max-width: 100%;
+            width: 80%;
+            max-width: 80%;
             height: auto;
-            border-radius: 10px;
-        }
-
-        /* Module Title and Description */
-        .module h2 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .module p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Button Styling */
         .cta-button {
             display: block;
             width: 60%;
-            padding: 12px;
-            background-color: #28a745;
+            padding: 14px;
+            background-color: #2D6A4F; /* MXD Dark Green */
             color: white;
             text-align: center;
             font-size: 18px;
-            border-radius: 5px;
+            font-weight: bold;
+            border-radius: 6px;
             margin: 20px auto;
             text-decoration: none;
             cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button:hover {
-            background-color: #218838;
+            background-color: #1E4C38; /* Darker green on hover */
         }
 
-        /* Responsive Mobile Design */
+        /* Secondary Button */
+        .secondary-button {
+            display: block;
+            width: 60%;
+            padding: 14px;
+            background-color: #1E3A8A; /* MXD Bold Blue */
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            margin: 20px auto;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .secondary-button:hover {
+            background-color: #1D4ED8; /* Lighter blue on hover */
+        }
+
+        /* Mobile Responsiveness */
         @media screen and (max-width: 768px) {
             .module h2 {
                 font-size: 22px;
@@ -91,9 +119,14 @@
                 font-size: 16px;
             }
 
-            /* Video adjustments */
             video {
-                max-width: 100%;
+                width: 90%;
+                border-radius: 10px;
+            }
+
+            .secondary-button {
+                width: 80%;
+                font-size: 16px;
             }
         }
     </style>
