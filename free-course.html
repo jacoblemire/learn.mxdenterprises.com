@@ -1,115 +1,155 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Free Course - MXD Sales Academy</title>
+  <title>Free Course - MXD Enterprises</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
-    }
-    header {
-      background-color: #333;
+      background: linear-gradient(135deg, #4e7dff, #18c8c8);
       color: white;
-      padding: 20px;
-      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 50px;
+      background-size: cover;
+      background-attachment: fixed;
     }
-    .container {
-      width: 80%;
-      margin: 20px auto;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .module {
-      background-color: #fff;
-      margin: 20px 0;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .module h3 {
-      margin-bottom: 10px;
-    }
-    .cta-button {
-      display: block;
+
+    /* Course Content Container */
+    .course-container {
       width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 40px;
       text-align: center;
-      background-color: #f04e23;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-top: 40px;
+      color: #00b894;
+    }
+
+    /* Module Content */
+    .module {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .module h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .module p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* Video Preview Box */
+    .module video {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Buttons */
+    .cta-button {
+      background-color: #00b894;
       color: white;
-      padding: 10px;
-      text-decoration: none;
+      font-weight: bold;
+      padding: 15px;
+      width: 250px;
+      text-align: center;
       border-radius: 5px;
       margin-top: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
+
     .cta-button:hover {
-      background-color: #d43d1a;
+      background-color: #00a079;
+      transform: scale(1.05);
     }
-    .progress-bar {
-      width: 100%;
-      background-color: #eee;
-      border-radius: 5px;
-      margin: 10px 0;
+
+    /* Footer Section */
+    .footer {
+      margin-top: 40px;
+      font-size: 16px;
+      text-align: center;
+      color: #bbb;
     }
-    .progress-bar span {
-      display: block;
-      height: 20px;
-      background-color: #4CAF50;
-      width: 33%; /* 33% for Module 1 */
-      border-radius: 5px;
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      color: #00b894;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>You're In! Your 3-Step Roadmap to $5K+/Month Starts Now!</h1>
-    <h2>This training is going to fast-track your path to earning remotely. Let’s dive right in!</h2>
-  </header>
+  <div class="course-container">
+    <h1>Free Course: How to Make $5K–$10K/Month Remotely Through High-Ticket Sales</h1>
 
-  <div class="container">
-    <h2>Your Course is Ready! Let's Get Started</h2>
-    <p>Every step here is designed to move you toward making $5K–$10K/month. Let’s get to work!</p>
-
-    <!-- Progress Bar -->
-    <div class="progress-bar">
-      <span></span>
-    </div>
-
+    <!-- Module 1 -->
     <div class="module">
-      <h3>Module 1: The Mindset Shift</h3>
-      <p>This module covers the first steps to changing your mindset for success. Let’s kickstart your transformation!</p>
-      <div style="width: 100%; height: 200px; background-color: #ccc; text-align: center; line-height: 200px;">[Module 1 Video Preview]</div>
+      <h3>Module 1: Introduction to High-Ticket Sales</h3>
+      <p>We’ll start by explaining the basics of high-ticket sales, how they work, and how you can leverage them for consistent income.</p>
+      <video controls>
+        <source src="path-to-your-video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a href="https://calendly.com/jadafig1" class="cta-button" target="_blank">Book Your Free Strategy Call</a>
     </div>
 
+    <!-- Module 2 -->
     <div class="module">
-      <h3>Module 2: How to Sell High-Ticket Offers Remotely</h3>
-      <p>Learn how to sell premium offers with ease, right from your phone. You’ve got this!</p>
-      <div style="width: 100%; height: 200px; background-color: #ccc; text-align: center; line-height: 200px;">[Module 2 Video Preview]</div>
+      <h3>Module 2: Understanding Your Target Market</h3>
+      <p>This module dives into identifying your ideal clients, their pain points, and how to approach them effectively.</p>
+      <video controls>
+        <source src="path-to-your-video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" target="_blank">Join the MXD Sales Academy</a>
     </div>
 
+    <!-- Module 3 -->
     <div class="module">
       <h3>Module 3: How to Start Closing Deals and Making $5K–$10K/Month</h3>
-      <p>We’ll show you how to start making real sales and earning consistently.</p>
-      <div style="width: 100%; height: 200px; background-color: #ccc; text-align: center; line-height: 200px;">[Module 3 Video Preview]</div>
+      <p>We’ll show you how to start making real sales and earning consistently using our proven strategies.</p>
+      <video controls>
+        <source src="path-to-your-video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" target="_blank">Join the MXD Sales Academy</a>
     </div>
 
-    <!-- CTA -->
-    <a href="https://calendly.com/jada-mxd" class="cta-button" target="_blank">Book Your Free Strategy Call</a>
-
-    <p style="text-align: center; margin-top: 30px;">
-      <strong>Ready to earn 5–10K/month?</strong> <br>
-      <a href="https://mxdenterprises.com" class="cta-button" target="_blank">Join the MXD Sales Academy</a>
-    </p>
-
-    <!-- Testimonial Section -->
-    <h2 style="text-align: center;">Success Stories</h2>
-    <p>"I went from struggling to landing $10K/month clients in just 3 months!" — Mark, Academy Graduate</p>
-    <p>"The step-by-step guidance completely changed my life." — Sarah, New Earner</p>
+    <!-- Footer Section -->
+    <div class="footer">
+      <p>Want more success stories like these? <a href="https://calendly.com/jadafig1" target="_blank">Book a Call with Jada</a> to learn more!</p>
+      <p>"I went from struggling to landing $10K/month clients in just 3 months!" — Mark, Academy Graduate</p>
+      <p>"The step-by-step guidance completely changed my life." — Sarah, New Earner</p>
+    </div>
   </div>
 
 </body>
