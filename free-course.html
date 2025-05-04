@@ -22,7 +22,6 @@
       transition: all 0.3s ease-in-out;
     }
 
-    /* Course Content Container */
     .course-container {
       width: 100%;
       max-width: 1000px;
@@ -43,14 +42,13 @@
       transition: font-size 0.3s ease;
     }
 
-    h2 {
-      font-size: 26px;
-      margin-top: 40px;
-      color: #00b894;
-      text-align: center;
+    h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
     }
 
-    /* Module Content */
     .module {
       background-color: rgba(0, 0, 0, 0.7);
       padding: 20px;
@@ -62,14 +60,6 @@
       width: 100%;
       max-width: 900px;
       margin: 20px 0;
-      transition: all 0.3s ease;
-    }
-
-    .module h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
     }
 
     .module p {
@@ -77,7 +67,7 @@
       margin-bottom: 20px;
     }
 
-    /* Video Preview Box */
+    /* Video Preview */
     .module video {
       width: 100%;
       max-width: 320px; /* Smaller video size */
@@ -86,7 +76,7 @@
       transition: all 0.3s ease;
     }
 
-    /* Button styles */
+    /* Centered Call to Action Button */
     .cta-button {
       background-color: #00b894;
       color: white;
@@ -109,7 +99,6 @@
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     }
 
-    /* Footer Section */
     .footer {
       margin-top: 40px;
       font-size: 14px;
@@ -133,10 +122,6 @@
         font-size: 28px;
       }
 
-      h2 {
-        font-size: 22px;
-      }
-
       .module {
         padding: 20px;
       }
@@ -145,6 +130,7 @@
         max-width: 100%;
       }
 
+      /* Video adjustments for mobile */
       .module video {
         width: 100%;
         max-width: 100%;
@@ -163,14 +149,11 @@
 
       .cta-button {
         font-size: 14px;
+        padding: 12px 20px;
       }
 
       .footer {
         font-size: 12px;
-      }
-
-      .cta-button {
-        padding: 12px 20px;
       }
     }
   </style>
@@ -188,6 +171,8 @@
         <source src="path-to-your-video1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <!-- CTA Button under the video -->
+      <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" target="_blank">Join the MXD Sales Academy</a>
     </div>
 
     <!-- Module 2 -->
@@ -198,6 +183,8 @@
         <source src="path-to-your-video2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <!-- CTA Button under the video -->
+      <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" target="_blank">Join the MXD Sales Academy</a>
     </div>
 
     <!-- Module 3 -->
@@ -208,6 +195,7 @@
         <source src="path-to-your-video3.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <!-- Only CTA Button under Module 3 -->
       <a href="https://whop.com/checkout/plan_FfCu0luQBYnz0?d2c=true" class="cta-button" target="_blank">Join the MXD Sales Academy</a>
     </div>
 
