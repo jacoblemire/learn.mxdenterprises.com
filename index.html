@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Free Training - MXD Enterprises</title>
   <style>
-    /* Body and background */
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(45deg, #2D6A4F, #4C9A2B); /* MXD Green Gradient */
+      background: linear-gradient(45deg, #2D6A4F, #4C9A2B);
       background-size: 400% 400%;
       animation: gradientBackground 10s ease infinite;
       color: white;
@@ -21,22 +20,14 @@
       background-attachment: fixed;
     }
 
-    /* Animation for the background gradient */
     @keyframes gradientBackground {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    /* Form container */
     .form-container {
-      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for a clean look */
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 40px;
       border-radius: 12px;
       width: 100%;
@@ -48,7 +39,6 @@
       transition: transform 0.3s ease-in-out;
     }
 
-    /* Hover effect to slightly zoom in the form container */
     .form-container:hover {
       transform: scale(1.05);
     }
@@ -56,7 +46,7 @@
     .form-container h1 {
       font-size: 36px;
       margin-bottom: 20px;
-      color: #2D6A4F; /* MXD Dark Green for main heading */
+      color: #2D6A4F;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 
@@ -64,10 +54,9 @@
       font-size: 18px;
       margin-bottom: 20px;
       font-weight: 300;
-      color: #D1D5DB; /* Light gray for subheading */
+      color: #444;
     }
 
-    /* Form Fields */
     .form-container input,
     .form-container button {
       width: 100%;
@@ -80,7 +69,6 @@
       transition: all 0.3s ease-in-out;
     }
 
-    /* Input styles */
     .form-container input[type="text"],
     .form-container input[type="email"] {
       background-color: #fff;
@@ -89,32 +77,29 @@
 
     .form-container input:focus {
       outline: none;
-      border: 2px solid #00b894; /* Focused input effect */
+      border: 2px solid #00b894;
     }
 
-    /* Button styles */
     .form-container button {
-      background-color: #2D6A4F; /* MXD Dark Green */
+      background-color: #2D6A4F;
       color: white;
       font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
     }
 
     .form-container button:hover {
-      background-color: #1E4C38; /* Darker green on hover */
-      transform: scale(1.05); /* Hover effect on button */
+      background-color: #1E4C38;
+      transform: scale(1.05);
     }
 
-    /* Disclaimer and Links */
     .disclaimer {
       font-size: 12px;
-      color: #bbb;
+      color: #666;
       margin-top: 10px;
     }
 
     .disclaimer a {
-      color: #fff;
+      color: #2D6A4F;
       text-decoration: none;
     }
 
@@ -124,16 +109,15 @@
     }
 
     .footer a {
-      color: #fff;
+      color: #2D6A4F;
       text-decoration: none;
       font-weight: bold;
     }
 
     .footer a:hover {
-      color: #00b894; /* Accent color on hover */
+      color: #00b894;
     }
 
-    /* Mobile Responsiveness */
     @media screen and (max-width: 768px) {
       .form-container {
         padding: 25px;
@@ -164,20 +148,22 @@
     <h1>How to Make $5K–$10K/Month Remotely Through High-Ticket Sales</h1>
     <h2>Get instant access to our proven system for earning remotely — no fluff, just results!</h2>
 
-    <!-- Form for collecting data -->
-    <form action="https://formspree.io/f/xwpoljrg" method="POST" onsubmit="window.location.href='free-course.html'; return false;">
+    <!-- Formspree-connected form with redirect -->
+    <form action="https://formspree.io/f/xwpoljrg" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
+      <input type="hidden" name="_redirect" value="https://mxdenterprises.com/free-course.html" />
       <button type="submit">Get Instant Access</button>
     </form>
 
-    <!-- Disclaimer and footer -->
     <p class="disclaimer">
       Disclaimer: This training is for educational purposes only. We do not guarantee any income, sales, or business results. Your success depends on your effort, consistency, and market conditions.
     </p>
 
     <div class="footer">
-      <p>Questions? <a href="mailto:contact@mxdenterprises.com">Email Us</a> | <a href="https://calendly.com/jada-mxd" target="_blank">Book a Call with Jada</a></p>
+      <p>Questions? <a href="mailto:contact@mxdenterprises.com">Email Us</a> | 
+         <a href="https://calendly.com/jada-mxd" target="_blank">Book a Call with Jada</a>
+      </p>
     </div>
   </div>
 
