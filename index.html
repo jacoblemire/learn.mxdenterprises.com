@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free Training - MXD Enterprises</title>
   <style>
     body {
@@ -27,38 +27,30 @@
     }
 
     .form-container {
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(0, 0, 0, 0.85);
       padding: 40px;
       border-radius: 12px;
       width: 100%;
       max-width: 500px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
       text-align: center;
-      position: relative;
       z-index: 1;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .form-container:hover {
-      transform: scale(1.05);
     }
 
     .form-container h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      color: #2D6A4F;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #fff;
     }
 
     .form-container h2 {
-      font-size: 18px;
-      margin-bottom: 20px;
+      font-size: 16px;
+      margin-bottom: 25px;
       font-weight: 300;
-      color: #444;
+      color: #ccc;
     }
 
-    .form-container input,
-    .form-container button {
+    input[type="text"], input[type="email"], input[type="tel"] {
       width: 100%;
       padding: 15px;
       margin: 10px 0;
@@ -66,41 +58,31 @@
       border-radius: 6px;
       font-size: 16px;
       box-sizing: border-box;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .form-container input[type="text"],
-    .form-container input[type="email"] {
       background-color: #fff;
       color: #333;
     }
 
-    .form-container input:focus {
-      outline: none;
-      border: 2px solid #00b894;
-    }
-
-    .form-container button {
+    button[type="submit"] {
+      width: 100%;
+      padding: 15px;
       background-color: #2D6A4F;
-      color: white;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
       font-weight: bold;
+      font-size: 16px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .form-container button:hover {
+    button[type="submit"]:hover {
       background-color: #1E4C38;
-      transform: scale(1.05);
     }
 
     .disclaimer {
       font-size: 12px;
-      color: #666;
-      margin-top: 10px;
-    }
-
-    .disclaimer a {
-      color: #2D6A4F;
-      text-decoration: none;
+      color: #aaa;
+      margin-top: 20px;
     }
 
     .footer {
@@ -109,35 +91,14 @@
     }
 
     .footer a {
-      color: #2D6A4F;
+      color: #90ee90;
       text-decoration: none;
       font-weight: bold;
-    }
-
-    .footer a:hover {
-      color: #00b894;
     }
 
     @media screen and (max-width: 768px) {
       .form-container {
         padding: 25px;
-      }
-
-      .form-container h1 {
-        font-size: 30px;
-      }
-
-      .form-container h2 {
-        font-size: 16px;
-      }
-
-      .form-container input,
-      .form-container button {
-        font-size: 14px;
-      }
-
-      .form-container button {
-        padding: 12px;
       }
     }
   </style>
@@ -145,27 +106,34 @@
 <body>
 
   <div class="form-container">
-    <h1>How to Make $5K–$10K/Month Remotely Through High-Ticket Sales</h1>
-    <h2>Get instant access to our proven system for earning remotely — no fluff, just results!</h2>
+    <h1>How to Make $5K–$10K/Month Remotely</h1>
+    <h2>Free training shows how to earn from your phone with high-ticket sales.</h2>
 
-    <!-- Formspree-connected form with redirect -->
-    <form action="https://formspree.io/f/xwpoljrg" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="hidden" name="_redirect" value="https://mxdenterprises.com/free-course.html" />
-      <button type="submit">Get Instant Access</button>
+    <form action="https://assets.mailerlite.com/jsonp/1498977/forms/153753169787094514/subscribe" method="POST" target="_blank">
+      <input type="text" name="fields[name]" placeholder="Your Name" required />
+      <input type="email" name="fields[email]" placeholder="Your Email" required />
+      <input type="tel" name="fields[phone]" placeholder="Phone Number" required />
+      <input type="hidden" name="ml-submit" value="1" />
+      <button type="submit">Get Free Access</button>
     </form>
 
     <p class="disclaimer">
-      Disclaimer: This training is for educational purposes only. We do not guarantee any income, sales, or business results. Your success depends on your effort, consistency, and market conditions.
+      Disclaimer: This training is for educational purposes only. Results are not guaranteed. Your effort determines your outcome.
     </p>
 
     <div class="footer">
-      <p>Questions? <a href="mailto:contact@mxdenterprises.com">Email Us</a> | 
-         <a href="https://calendly.com/jada-mxd" target="_blank">Book a Call with Jada</a>
-      </p>
+      <p>Questions? <a href="mailto:contact@mxdenterprises.com">Email Us</a></p>
     </div>
   </div>
 
+  <script>
+    function ml_webform_success_25700692() {
+      document.querySelector('.form-container').innerHTML = `
+        <h1>You’re In. Let’s Get You to $5–10K/Month.</h1>
+        <p>Your free training is on the way — check your inbox and lock in.</p>
+      `;
+    }
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"></script>
 </body>
 </html>
