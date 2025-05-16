@@ -107,11 +107,10 @@
     <h1>Start Building Remote Income — From Your Phone</h1>
     <h2>Get the free training that helped us build freedom through high-ticket remote sales.</h2>
 
-    <form class="form-wrapper" action="https://formspree.io/f/mvgalkko" method="POST">
+    <form id="mxd-form" class="form-wrapper">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <input type="tel" name="phone" placeholder="Phone Number" required />
-      <input type="hidden" name="_redirect" value="https://learn.mxdenterprises.com/free-course.html" />
       <button type="submit">Get Free Access</button>
     </form>
 
@@ -123,6 +122,30 @@
       <p>Questions? <a href="mailto:contact@mxdenterprises.com">Email Us</a></p>
     </div>
   </div>
+
+  <script>
+    document.getElementById("mxd-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+
+      fetch("https://formspree.io/f/mvgalkko", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          window.location.href = "/free-course.html";
+        } else {
+          alert("There was an issue submitting your form. Please try again.");
+        }
+      }).catch(() => {
+        alert("There was a network error. Please check your connection and try again.");
+      });
+    });
+  </script>
 
 </body>
 </html>
