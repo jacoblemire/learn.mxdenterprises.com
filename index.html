@@ -107,11 +107,11 @@
     <h1>Start Building Remote Income — From Your Phone</h1>
     <h2>Get the free training that helped us build freedom through high-ticket remote sales.</h2>
 
-    <form id="mxd-form" class="form-wrapper">
-      <input type="text" name="fields[name]" placeholder="Your Name" required />
-      <input type="email" name="fields[email]" placeholder="Your Email" required />
-      <input type="tel" name="fields[phone]" placeholder="Phone Number" required />
-      <input type="hidden" name="ml-submit" value="1" />
+    <form class="form-wrapper" action="https://formspree.io/f/mvgalkko" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="hidden" name="_redirect" value="https://learn.mxdenterprises.com/free-course.html" />
       <button type="submit">Get Free Access</button>
     </form>
 
@@ -123,22 +123,6 @@
       <p>Questions? <a href="mailto:contact@mxdenterprises.com">Email Us</a></p>
     </div>
   </div>
-
-  <script>
-    document.getElementById("mxd-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const form = e.target;
-      const formData = new FormData(form);
-
-      fetch("https://assets.mailerlite.com/jsonp/1498977/forms/153753169787094514/subscribe", {
-        method: "POST",
-        body: formData,
-        mode: "no-cors"
-      }).then(() => {
-        window.location.href = "/free-course.html";
-      });
-    });
-  </script>
 
 </body>
 </html>
